@@ -1,0 +1,320 @@
+/* file         style.css
+ * author       son of many fathers
+ * modified     20140302-1902 by mariferra@gmail.com
+ * note         management of the project home page
+ */
+
+html, body, #layouts, .layout
+    {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+    }
+
+body
+    {
+	overflow: hidden;
+	background-color: #000;
+    }
+
+.layout
+    {
+	position: relative;
+	width: 33.3%;
+	float: left;
+	overflow: hidden;
+    }
+
+.bg-img
+    {
+	display: block;
+	position: relative;
+
+	-webkit-transition: -webkit-transform 0.5s ease;
+	   -moz-transition:    -moz-transform 0.5s ease;
+		-ms-transition:     -ms-transform 0.5s ease;
+		 -o-transition: 	 -o-transform 0.5s ease;
+			transition: 		transform 0.5s ease;
+    }
+
+.layout:hover > .bg-img
+    {
+/* not enlarge the image, when I pass the mouse over
+	-webkit-transform: scale(1.1);
+	   -moz-transform: scale(1.1);
+		 -o-transform: scale(1.1);
+		-ms-transform: scale(1.1);
+			transform: scale(1.1);
+*/
+    }
+
+.layout-overlay, .icon, .iconpr, .iconmc, .icongl, .text
+    {
+	-webkit-transition: opacity 0.5s ease-out 0s, margin-top 0.5s ease-out 0s;
+	   -moz-transition: opacity 0.5s ease-out 0s, margin-top 0.5s ease-out 0s;
+		-ms-transition: opacity 0.5s ease-out 0s, margin-top 0.5s ease-out 0s;
+		 -o-transition: opacity 0.5s ease-out 0s, margin-top 0.5s ease-out 0s;
+			transition: opacity 0.5s ease-out 0s, margin-top 0.5s ease-out 0s;
+    }
+
+.layout-overlay
+    {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: #000;
+	-webkit-opacity: 0.6;
+	   -moz-opacity: 0.6;
+	   		opacity: 0.6;
+	filter: alpha(opacity=60);
+    }
+
+.layout:hover > .layout-overlay
+    {
+	-webkit-opacity: 0.2;
+	   -moz-opacity: 0.2;
+	   		opacity: 0.2;
+	filter: alpha(opacity=20);
+    }
+
+.layout-lnk, .text, .icon, .iconpr, .iconmc, .icongl
+    {
+	display: block;
+	position: absolute;
+    }
+
+.layout-lnk
+    {
+	font-size: 36px;
+	text-transform: uppercase;
+	text-align: center;
+	top: 482px;
+	left: 13px;
+	bottom: 0;
+	right: 0;
+	color: #fff;
+    }
+
+.icon, .iconpr, .iconmc, .icongl, .text
+    {
+	top: 150px;
+    }
+
+.text
+    {
+	font-family: 'Amaranth', sans-serif;
+	font-weight: 900;
+	width: 100%;
+	height: 36px;
+	margin-top: -18px;
+    }
+
+.layout:hover .text
+    {
+	margin-top: 0px;
+    }
+
+.iconpr
+    {
+	left: 30%;
+	width: 240px;
+	height: 170px;
+	margin-top: -200px;
+	margin-left: -66px;
+	background-repeat: no-repeat;
+	background-position: left top;
+	-webkit-opacity: 0.15;
+	-moz-opacity: 0.15;
+	opacity: 0.15;
+	filter: alpha(opacity=15);
+    }
+
+.iconmc
+    {
+	left: 30%;
+	width: 240px;
+	height: 170px;
+	margin-top: -590px;
+	margin-left: -66px;
+	background-repeat: no-repeat;
+	background-position: left top;
+	-webkit-opacity: 0.15;
+	-moz-opacity: 0.15;
+	opacity: 0.15;
+	filter: alpha(opacity=15);
+    }
+
+.icongl
+    {
+	left: 30%;
+	width: 240px;
+	height: 170px;
+	margin-top: -200px;
+	margin-left: -66px;
+	background-repeat: no-repeat;
+	background-position: left top;
+	-webkit-opacity: 0.15;
+	-moz-opacity: 0.15;
+	opacity: 0.15;
+	filter: alpha(opacity=15);
+    }
+
+.layout:hover .iconpr
+    {
+	margin-top: -200px;
+	-webkit-opacity: 1;
+	   -moz-opacity: 1;
+	   		opacity: 1;
+	filter: alpha(opacity=100);
+    }
+
+.layout:hover .iconmc
+    {
+	margin-top: -590px;
+	-webkit-opacity: 1;
+	   -moz-opacity: 1;
+	   		opacity: 1;
+	filter: alpha(opacity=100);
+    }
+
+.layout:hover .icongl
+    {
+	margin-top: -200px;
+	-webkit-opacity: 1;
+	   -moz-opacity: 1;
+	   		opacity: 1;
+	filter: alpha(opacity=100);
+    }
+
+.progetti .iconpr
+    {
+	background: url('./mgb-index-pr-tit.png');
+    }
+
+.mecenati .iconmc
+    {
+	background: url('./mgb-index-mc-tit.png');
+    }
+
+.galleria .icongl
+    {
+	background: url('./mgb-index-gl-tit.png');
+    }
+
+@media only screen and (max-width: 600px)
+    {
+	.layout-lnk
+        {
+		font-size: 20px;
+	    }
+	.text
+        {
+		height: 20px;
+		margin-top: -10px;
+	    }
+	.layout:hover .text
+        {
+		margin-top: 12px;
+	    }
+	.icon
+        {
+		margin-top: -23px;
+		margin-left: -33px;
+		width: 67px;
+		height: 63px;
+	    }
+	.layout:hover .icon
+        {
+		margin-top: -56px;
+	    }
+	.mixed .icon
+        {
+		/*
+		background: url('./.png');
+		*/
+	    }
+	.narrow .icon
+        {
+		/*
+        background: url('./.png');
+        */
+	    }
+	.wide .icon
+        {
+        /*
+		background: url('./.png');
+		*/
+	    }
+    }
+
+#loading-overlay
+    {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: #000;
+    }
+
+/*
+ * pace
+ */
+
+.pace
+    {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+
+    z-index: 2000;
+    position: fixed;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 5px;
+    width: 200px;
+    background: #505050;
+    }
+
+.pace .pace-progress
+    {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+
+    -webkit-transition: width 1s ease-in-out 1s linear;
+    -moz-transition: width 1s ease-in-out 1s linear;
+    -ms-transition: width 1s ease-in-out 1s linear;
+    -o-transition: width 1s ease-in-out 1s linear;
+    transition: width 1s ease-in-out 1s linear;
+
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+
+    max-width: 200px;
+    position: fixed;
+    z-index: 2000;
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    background: #fff;
+    }
+
+.pace.pace-inactive
+    {
+    display: none;
+    }
